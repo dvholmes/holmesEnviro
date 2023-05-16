@@ -1,0 +1,24 @@
+{
+  "name": "holmesenviro",
+  "version": "1.0.0",
+  "description": "Holmes Enviro Webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvholmes/holmesEnviro.git"
+  },
+  "author": "Desmond Holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvholmes/holmesEnviro/issues"
+  },
+  "homepage": "https://github.com/dvholmes/holmesEnviro#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
