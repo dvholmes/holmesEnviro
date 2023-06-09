@@ -16,7 +16,7 @@ const NavBar = () => {
           <a href="https://pesticideazure20181023011716.azurewebsites.net/Login.aspx" className="nav-link" >Pesticide Tracking</a>
         </li >
         <li className="nav-item" >
-          <a href="https://chat.openai.com/" className="nav-link">Gallery</a>
+          <a href="/gallery" className="nav-link">Gallery</a>
         </li>
         <li className="nav-item">
           <a href="/products" className="nav-link" >Contacts</a>

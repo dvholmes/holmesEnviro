@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import HomePage from './Templates/Home';
 import ProductsPage from './Templates/products';
+import ImageGallery from './Templates/gallery.mjs';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,7 +21,12 @@ const router = createBrowserRouter([
   {
     path: "/products",
     element: <ProductsPage/>,
+  },
+  {
+    path: "/gallery",
+    element: <ImageGallery/>,
   }
+ 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
