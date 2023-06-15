@@ -1,13 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import HomePage from './Templates/Home';
+import ProductsPage from './Templates/products';
+import ImageGallery from './Templates/gallery.mjs';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+
+// routes to different pages
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage/>,
+   
+  },
+  {
+    path: "/products",
+    element: <ProductsPage/>,
+  },
+  {
+    path: "/gallery",
+    element: <ImageGallery/>,
+  }
+ 
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
