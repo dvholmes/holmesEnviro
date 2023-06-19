@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 import { storage } from "../firebase.js";
 import Header from '../components/header.js';
 import NavBar from '../components/navbar.js';
-import React from 'react';
+import { Filter } from 'react-feather';
+
+
+
 
 function ImageGallery() {
   const [imageURLs, setImageURLs] = useState([]);
@@ -11,6 +14,7 @@ function ImageGallery() {
   const [imagesPerPage] = useState(20);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+  const [filterPopup, changeFilterpopup] = useState(false);
 
   useEffect(() => {
     const fetchImageURLs = async () => {
@@ -32,6 +36,7 @@ function ImageGallery() {
     fetchImageURLs();
   }, []);
 
+
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
   const currentImages = imageURLs.slice(indexOfFirstImage, indexOfLastImage);
@@ -40,6 +45,11 @@ function ImageGallery() {
   const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
 
   // create popup screen when the user selects and image.
+
+  const handleFilterClick = () => {
+    changeFilterpopup(!filterPopup)
+
+  };
   const handleImageClick = (url) => {
     setSelectedImage(url);
     setIsPopUpOpen(true);
@@ -64,9 +74,26 @@ function ImageGallery() {
 
       <div className = "filter_button_container">
 
-        <button className = "filter_button">Filter Gallery</button>
+        <button className = 'flex-container' onClick={() => handleFilterClick()} >
+
+          <span>Filter Images</span>
+          
+          <Filter className="icon-class"/>
+        </button>
+      
 
       </div>
+
+
+
+      {filterPopup && (<div className="filter-pop-up">
+          <div className="filter-content">
+            
+            <button onClick={() => handleFilterClick()}>Close</button>
+          </div>
+        </div>)}
+
+     
 
       
 
