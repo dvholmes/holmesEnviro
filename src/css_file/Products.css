@@ -1,0 +1,146 @@
+
+.products-container{
+    background-image: url('../../public/Foliar-Stealth-and-R2.png');
+    display: grid;
+    margin: 3%;
+  
+    position: relative;
+    isolation: isolate;
+    border-radius: 5%; /* Adjust the border-radius value to control the rounding effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  .products-container::after {
+    content: '';
+    position:absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: .5;
+    background: rgb(0, 0, 0);
+    border-radius: 5%; /* Adjust the border-radius value to control the rounding effect */
+  
+  
+  }
+  
+  .product_content{
+    color: white;
+  }
+  
+  .product_items{
+    width: 60%;;
+    margin-bottom: 30px;
+  
+  
+  }
+  
+  .product_text{
+    font-size: 1.5vw; 
+  }
+  
+  /*alter bullet points*/ 
+  .product_items ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default left padding */
+  }
+  
+  .product_items li::before {
+    content: "*"; /* Use a custom bullet point, such as a circle */
+    font-size: 20px; /* Adjust the size of the bullet point */
+    margin-right: 8px; /* Add spacing between the bullet point and the text */
+  }
+  
+  
+  
+  
+  .product_title_contaniner {
+ 
+
+    display: flex;
+   
+    width: 100%;
+    height: 20%;
+    align-items: center; /* Centers children vertically */
+ 
+  }
+  
+  .dropdownMenu {
+    background-color: rgb(173, 186, 254);
+    color: black;
+    border-radius: 100px;
+    margin-left: 5%;
+    width: 13vw;
+    height: 5vh;
+    font-size: .5vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: solid 2px black;
+    padding: .5%;
+
+  }
+
+  .title_container,.dropdownMenu {
+  display: inline-block;
+  vertical-align: top; /* Align them to the top of the container */
+  /* Add any additional styles as needed */
+}
+  
+  /* Add a class when the dropdown is active (e.g., when it's visible) */
+  .dropdownMenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+    height: 100%;
+  }
+  
+  .dropdownMenu.inactive {
+  
+    opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+  }
+  
+  .product_title{
+    
+    
+    font-size: 2vw;
+
+  }
+
+  .product_title:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
+    color: rgb(137, 179, 218);
+   
+  }
+
+
+  
+  
+  .prod_page_title{
+    
+   
+    font-size: 2vw;
+    
+  }
+  
+.labels_class{
+  text-decoration: underline 2px black;
+    
+
+}
+
+.labels_class:hover{
+  text-decoration: underline 2px white;
+  color:white;
+
+}

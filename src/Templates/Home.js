@@ -26,6 +26,8 @@ function HomePage(){
     
             </div>
 
+            {/* <div>   <embed src="Labels/Enhand SDS v2019.pdf" type="application/pdf" width="100%" height="100%" /></div> */}
+
 
 
         </div>
