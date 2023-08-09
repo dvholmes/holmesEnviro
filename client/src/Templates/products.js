@@ -1,11 +1,29 @@
 import React from 'react'
 import Header from '../components/header'
 import NavBar from '../components/navbar'
+import {useState } from "react";
 
-import '../App.css'
+
+import '../css_file/Products.css'
 
 function ProductsPage(){
 
+
+    const [pfdStates, setpdfStates] = useState({
+        hyperGalaxy: false,
+        RedTail: false,
+        Stealth: false,
+      });
+
+    const toggleState = (key) => {
+        setpdfStates((prevState) => ({
+        ...prevState,
+        [key]: !prevState[key],
+        }));
+    };
+
+    const[isPopUpOpen,setPopup] = useState(false);
+    
     return (
 
         // header part of the webpage
@@ -31,14 +49,41 @@ function ProductsPage(){
                     
                     <div className = "product_content">
 
-                        <h2 className = "product_title"> HyperGalaxy</h2>
-                        <ul>
-                            <li className='product_text'>Hyper Galaxy™ transforms plant growth through pioneering rhizobacteria use, improving unrivaled crop promotion and advancement.</li>
-                            <li className='product_text'>Directly improves plant growth, crop yields and #1 quality</li>
-                            <li className='product_text'>Product is applied to seeds or root zone</li>
-                            
-                        </ul>
+                        <div className = "product_title_contaniner">
+                           
+                                
 
+
+                                <div className = 'title_container'>
+                                    <h2 className = "product_title" onClick={() => toggleState('hyperGalaxy')}> HyperGalaxy</h2>
+                                </div>
+
+                                <div className={`dropdownMenu ${pfdStates.hyperGalaxy? 'active' : 'inactive'}`}>
+
+                                    <h2 className = "labels_class" onClick={() => setPopup()}>View Product label pdf</h2>
+                                    <h2 className = "labels_class">View SDS pdf</h2>
+
+
+                                </div>
+
+                             
+
+                               
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li className='product_text'>Hyper Galaxy™ transforms plant growth through pioneering rhizobacteria use, improving unrivaled crop promotion and advancement.</li>
+                                <li className='product_text'>Directly improves plant growth, crop yields and #1 quality</li>
+                                <li className='product_text'>Product is applied to seeds or root zone</li>
+                                
+                            </ul>
+
+
+
+                        </div>
+                        
+                       
                     </div>
                 </div>
 
@@ -101,6 +146,17 @@ function ProductsPage(){
               
 
             </div>
+
+            
+            {isPopUpOpen && (
+        <div className="pop-up">
+          <div className="pop-up-content">
+            
+            <button onClick={() => setPopup(false)}>Close</button>
+          </div>
+        </div>
+      )}
+    
 
         </div>
        
