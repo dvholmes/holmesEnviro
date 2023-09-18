@@ -13,6 +13,7 @@ function ProductsPage(){
         hyperGalaxy: false,
         RedTail: false,
         Stealth: false,
+        Enhand: false,
       });
 
     const toggleState = (key) => {
@@ -23,6 +24,7 @@ function ProductsPage(){
     };
 
     const[isPopUpOpen,setPopup] = useState(false);
+    const[file_path,setFilePath] = useState(null);
     
     return (
 
@@ -60,13 +62,11 @@ function ProductsPage(){
 
                                 <div className={`dropdownMenu ${pfdStates.hyperGalaxy? 'active' : 'inactive'}`}>
 
-                                    <h2 className = "labels_class" onClick={() => setPopup()}>View Product label pdf</h2>
-                                    <h2 className = "labels_class">View SDS pdf</h2>
-
+                                    <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/hyper-galaxy08.pdf');}}>View Product label pdf</h2>
+                                    <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/Hyper Galaxy SDS v2019.pdf');}}>View SDS pdf</h2>
 
                                 </div>
 
-                             
 
                                
                         </div>
@@ -93,7 +93,29 @@ function ProductsPage(){
                     
                     <div className = "product_content">
 
-                        <h2 className = "product_title"> Redtail™</h2>
+                        <div className = "product_title_contaniner">
+                            
+                                    
+
+
+                            <div className = 'title_container'>
+                                <h2 className = "product_title" onClick={() => toggleState('RedTail')}> RedTail</h2>
+                            </div>
+
+                            <div className={`dropdownMenu ${pfdStates.RedTail? 'active' : 'inactive'}`}>
+
+                                <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/RedTail SDS.pdf');}}>View Product label pdf</h2>
+                                <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/redtail05.pdf');}}>View SDS pdf</h2>
+
+                            </div>
+
+
+                            
+                        </div>
+
+                        
+
+                        
                         <ul>
                             <li className='product_text'>Redtail™ innovates crop management, healing wounds, and fortifying plants for enhanced resilience and health.</li>
                             <li className='product_text'>Apply 5 - 12 days prior to severe damage or after pesticide treatments</li>
@@ -106,11 +128,30 @@ function ProductsPage(){
                     </div>
 
                 </div>
+
                 <div className='product_items' >
                     
                     <div className = "product_content">
 
-                        <h2 className = "product_title">Stealth</h2>
+                        <div className = "product_title_contaniner">
+                            
+                                    
+
+
+                            <div className = 'title_container'>
+                                <h2 className = "product_title" onClick={() => toggleState('Stealth')}> Stealth</h2>
+                            </div>
+
+                            <div className={`dropdownMenu ${pfdStates.Stealth? 'active' : 'inactive'}`}>
+
+                                <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/Stealth  SDS v2019.pdf');}}>View Product label pdf</h2>
+                                <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/stealth25.pdf');}}>View SDS pdf</h2>
+
+                            </div>
+
+
+                            
+                        </div>
                         <ul>
                             <li className='product_text'>Stealth™ represents an exceptional technological advancement meticulously crafted and pioneered by the ingenious minds at Holmes ENVIRO.</li>
                             <li className='product_text'>Improve vigor and tolerance to abiotic stress</li>
@@ -128,7 +169,25 @@ function ProductsPage(){
                     
                     <div className = "product_content">
 
-                        <h2 className = "product_title"> MircoDigest</h2>
+                        <div className = "product_title_contaniner">
+                            
+                                    
+
+
+                            <div className = 'title_container'>
+                                <h2 className = "product_title" onClick={() => toggleState('Enhand')}>Enhand</h2>
+                            </div>
+
+                            <div className={`dropdownMenu ${pfdStates.Enhand? 'active' : 'inactive'}`}>
+
+                                <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/Enhand SDS v2019.pdf');}}>View Product label pdf</h2>
+                                <h2 className = "labels_class" onClick={() => {setPopup(true);setFilePath('Labels/Enhand22.pdf');}}>View SDS pdf</h2>
+
+                            </div>
+
+
+                            
+                        </div>
                         <ul>
                             <li className='product_text'>Microdigest™ redefines residue degradation, breaking down plant, organic, and chemical residues with unmatched efficacy.</li>
                             <li className='product_text'>Apply 5 - 12 days prior to severe damage or after pesticide treatments</li>
@@ -151,8 +210,11 @@ function ProductsPage(){
             {isPopUpOpen && (
         <div className="pop-up">
           <div className="pop-up-content">
+            <button className= "close_button"onClick={() => setPopup(false)}>Close</button>
+
+            <embed src={file_path} type="application/pdf" width="100%" height="100%" />
             
-            <button onClick={() => setPopup(false)}>Close</button>
+            
           </div>
         </div>
       )}

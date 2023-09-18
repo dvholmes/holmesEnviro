@@ -100,29 +100,7 @@
 
 /*Home page css*/
 
-.main-content {
-  background-image: url('../public/Aerial-app-at-Sunris.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Fill entire viewport height */
-  width: 100%;
-}
 
-.main-content-header{
-  margin: 0;
-  font-size: 7vw;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  color: Black;
-
-  font-family: 'Great Vibes', cursive;
-
- 
-
-
-}
 
 
 /*product page css*/
@@ -273,7 +251,7 @@
   cursor: pointer;
 }
 /* filter button css in gallery page.*/
-.filter_button_container{
+/* .filter_button_container{
   display: grid;
   place-items: center;
   
@@ -317,6 +295,7 @@
 .icon-class{
   
   width: 15%;
+  
   
 }
 
@@ -393,4 +372,4 @@
 .filter-close:hover{
   transform: scale(1.1);
 
-}
+} */

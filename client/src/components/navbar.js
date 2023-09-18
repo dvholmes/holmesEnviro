@@ -8,7 +8,6 @@ const NavBar = () => {
         <li className="nav-item">
           <a href="/"className="nav-link" >Home</a>
         </li>
-      
         <li className="nav-item" > 
           <a href="/products" className="nav-link">Products</a>
         </li>
@@ -17,9 +16,6 @@ const NavBar = () => {
         </li >
         <li className="nav-item" >
           <a href="/gallery" className="nav-link">Gallery</a>
-        </li>
-        <li className="nav-item">
-          <a href="/products" className="nav-link" >Contacts</a>
         </li>
       </ul>
     </nav>

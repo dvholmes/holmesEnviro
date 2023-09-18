@@ -25,8 +25,7 @@ const router = createBrowserRouter([
   {
     path: "/gallery",
     element: <ImageGallery/>,
-  }
- 
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

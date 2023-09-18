@@ -1,6 +1,6 @@
 
 .products-container{
-    background-image: url('../../public/Foliar-Stealth-and-R2.png');
+    background-image: url('../../public/KAAR3494.JPG');
     display: grid;
     margin: 3%;
   
@@ -24,7 +24,6 @@
     opacity: .5;
     background: rgb(0, 0, 0);
     border-radius: 5%; /* Adjust the border-radius value to control the rounding effect */
-  
   
   }
   
@@ -123,9 +122,6 @@
    
   }
 
-
-  
-  
   .prod_page_title{
     
    
@@ -143,4 +139,57 @@
   text-decoration: underline 2px white;
   color:white;
 
+}
+
+/* pop up page css*/
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  z-index: 999;
+}
+
+.pop-up-content {
+
+  width: 80%;
+  height: 80%;
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+
+
+
+}
+
+
+.close_button{
+  
+  min-width: 20px;
+  max-width: 70px;
+  min-height: 10px;
+  max-height: 50px;
+  margin-top:2%;
+  margin-bottom: 2%;
+  font-size: .7em;
+ 
+ 
+  bottom: 10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close_button:hover{
+  
+  background-color: rgb(120, 0, 0);
+  color:rgb(255, 255, 255);
+
+  
 }
