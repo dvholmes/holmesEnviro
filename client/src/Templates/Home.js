@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 
 import '../css_file/homepage.css'
@@ -13,13 +14,9 @@ function HomePage(){
 
           
            <div className = "headerpage-container">
-            <Header/>
+                <Header/>
 
            </div>
-
-
-            
-        
 
             <div>
                 <div className = "main-content">
@@ -29,11 +26,13 @@ function HomePage(){
                     <div className = "main-button-container">
                         <button className = "main-content-button">Contact Us</button>
                     </div>
-
-                    
-                
                 </div>
     
+            </div>
+
+            <div className = 'footer-container'>
+                <Footer/>
+
             </div>
         </div>
        
