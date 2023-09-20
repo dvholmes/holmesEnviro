@@ -1,4 +1,14 @@
 
+
+:root{
+
+  --main-font-color:black;
+  --alternate-font-color:white;
+  --website-primary-color:#3a3a3a;
+  --website-secondary-color:mediumspringgreen;
+  --primary-font-style:"Clarkson",Helvetica,sans-serif;
+
+}
 .main-content {
     position: relative; /* Add relative positioning to enable overlay positioning */
     background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.5)), url('../../public/CEZY4236.JPG');
@@ -19,12 +29,8 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     color: rgb(230, 230, 230);
   
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Clarkson",Helvetica,sans-serif;
    
-  
-   
-  
-  
 }
 
 
@@ -48,6 +54,209 @@
    
 }
 .main-content-button:hover{
-    background-color:#3a3a3a;
-    color:mediumspringgreen;
+   
+  color:mediumspringgreen;
+  background-color: var(--website-primary-color);
+}
+
+.mission-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--website-primary-color);
+  color: var(--alternate-font-color)
+}
+
+.mission-title-container {
+  width: 75%;
+  padding: 2vw 0;
+}
+
+.mission-title {
+  font-family: var(--primary-font-style);
+  text-align: center;
+  font-size: 2.6em;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.7); /* Adjust the shadow properties as needed */
+}
+
+.mission-context-container {
+  width: 60%;
+  padding: 3em;
+}
+
+.mission-context-container p {
+  text-align: center;
+  font-size: 1.5em;
+  
+  
+}
+.mission-image-container{
+  padding: 2em;
+}
+
+.mission-image-container img{
+ 
+  width: 50vw;
+ 
+  border-radius: 10px;
+  filter: brightness(80%) contrast(120%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 700px) {
+  .mission-title {
+    font-size: 1.5em;
+  }
+
+  .mission-context-container p {
+    font-size: 1em; /* Adjust the font size for smaller screens */
+    padding: 0 1em; /* Add padding to make the text more readable on small screens */
+  }
+}
+
+/* about us section */
+
+.aboutus-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.aboutus-title-container{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.aboutus-title-container{
+  width: 75%;
+  padding: 2vw 0;
+
+}
+
+.who-are-we{
+  font-family: var(--primary-font-style);
+  text-align: center;
+  font-size: 2.6em;
+}
+
+.aboutus-content-container{
+  display:flex;
+ 
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Adjust alignment as needed */
+}
+
+.aboutus-images-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  
+  
+  align-items: center;
+  
+}
+
+
+.holmesenviro-desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:1vw;
+
+}
+
+.aboutus-content-item{
+  width:50%;
+ 
+}
+
+
+.holmesenviro-desc img{
+  width: 50%;
+  
+ 
+  border-radius: 20px;
+  filter: brightness(80%) contrast(120%);  
+}
+
+.aboutus-description{
+  background-color: var(--website-primary-color);
+  color: white;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  
+  align-items: center;
+
+}
+
+.description-container{
+  width: 70%;
+}
+
+.description-container p{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.microbialLabs-container{
+  background-color: var(--website-primary-color);
+  height: 100%;
+  color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.microbial-description{
+  width: 70%;
+
+}
+.microbial-description p{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.Biotech-research-container{
+  
+  display: flex;  
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.Biotech-research-container img{
+  width: 60%;
+  
+}
+
+@media (max-width: 1000px) {
+  .aboutus-content-item {
+    width: 100%
+  }
+  .holmesenviro-desc img{
+    width: 40%;
+    
+  }
+
+  .description-container p {
+    font-size: 2vw;
+  }
+  .microbial-description p{
+    
+    font-size: 2vw;
+  }
+  
+
+  
+
 }

@@ -1,13 +1,13 @@
+
 :root{
 
     --main-font-color:black;
     --alternate-font-color:white;
     --website-primary-color:#3a3a3a;
     --website-secondary-color:mediumspringgreen;
-    --primary-font-style:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-
+    --primary-font-style:"Clarkson",Helvetica,sans-serif;
+  
+  }
 
 .footer-class{
     background-color:var(--website-primary-color);

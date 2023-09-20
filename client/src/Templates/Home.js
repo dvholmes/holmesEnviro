@@ -30,6 +30,117 @@ function HomePage(){
     
             </div>
 
+            <section className = 'mission-section'>
+
+                <div className = 'mission-title-container'>
+                    <h1 className = 'mission-title'>Revolutionizing Agriculture with Bio-Kevlar & Eco-Pest Control</h1>
+                    
+                </div>
+
+                <div className = 'mission-context-container'>
+                    <p>Holmes ENVIRO is a pioneering entity in the realm of agriculture, 
+                        dedicated to fostering early plant growth and safeguarding crops through 
+                        cutting-edge biological solutions. With a unique focus on cultivating bacteria and 
+                        fungi, they have harnessed the power of nature to create a form of "bio-Kevlar" that 
+                        fortifies plants against the relentless assault of root feeders. Moreover, their 
+                        innovative approach extends to enhancing crop resilience in the face of challenging 
+                        environmental conditions, from heatwaves to saline soils. What sets them apart is their 
+                        cultivation of insect-killing spores, providing an eco-friendly means of pest control 
+                        that harmonizes with nature's delicate balance, ensuring a sustainable future for 
+                        agriculture.</p>
+
+                </div>
+
+                <div className = 'mission-image-container'>
+                    <img src = "Eco-Friendly-Pest-Control-What-You-Need-to-Know.jpg" alt ='Pest Control'/>
+                </div>
+            </section>
+
+
+            <section className = 'aboutus-container'>
+
+                <div className = 'aboutus-title-container'>
+
+                    <h1 className ='who-are-we'>Who Are We</h1>
+
+                </div>
+
+                <div className = 'aboutus-content-container'>
+                    <div className = 'aboutus-content-item'>
+
+                        <div className = 'microbialLabs-container'>
+                            <h1>Microbial Labs</h1>
+
+                            <div className = 'microbial-description'>
+                                <p>In our microbial labs, we specialize in the cultivation of bacteria and fungi in pure cultures, carefully nurtured on selective media. Our process is driven by a commitment to 
+                                    achieving the utmost diversity possible. We employ precise techniques to blend these cultures, resulting in the creation of microbial populations that represent the pinnacle of biodiversity. 
+                                    This approach underscores our dedication to scientific excellence and the advancement of microbiological research.
+                                </p>
+                            </div>
+                           
+
+                        </div>
+
+                    </div>
+
+                    <div className = 'aboutus-content-item'>
+
+                        <div className = 'Biotech-research-container'>
+                            <img src = 'biotech.png' alt = 'biotech-reasearch'/>
+
+                        </div>
+
+                    </div>
+
+                    <div className = 'aboutus-content-item'>
+
+                        <div className = 'aboutus-images-section'>
+                            <div className = 'holmesenviro-desc'>
+
+                                <h2>Michael Holmes</h2>
+                                <h3>Chief Operations & Production</h3>
+                                <h4>Jan 1995 - Present · 28 yrs</h4>
+                                <img src = 'desprof.png' alt = 'Michael Holmes'/>
+
+                            </div>
+                            
+
+                        
+                        </div>
+
+                    </div>
+
+                    <div className = 'aboutus-content-item'>
+                        <div className = 'aboutus-description'>
+
+                            <h2>About Michael Holmes</h2>
+                            <div className = 'description-container'>
+
+                                <p>Michael Holmes is a seasoned professional with over 28 years of experience in the field of agriculture and environmental science. 
+                                    Currently serving as the Chief Operating Officer at Holmes ENVIRO, LLC, he has been a driving force behind the company's operations and production since January 1995. 
+                                    His educational journey includes earning a Doctor of Philosophy (Ph.D.) from Oregon State University, where his research focused on risk assessment of genetically engineered 
+                                    microbes, isolation and identification of bacteria and fungi, applications for plant growth-promoting microbes in crops, and bioremediation of environmental pollutants. 
+                                    Michael's commitment to environmental sustainability and innovative biological solutions has made him a standout figure in the industry.
+                                </p>
+
+                            </div>
+
+                           
+
+                        </div>
+
+                    </div>
+
+                 
+               
+
+                </div>
+
+           
+
+
+            </section>
+
             <div className = 'footer-container'>
                 <Footer/>
 
