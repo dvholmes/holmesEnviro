@@ -5,9 +5,13 @@
   --main-font-color:black;
   --alternate-font-color:white;
   --website-primary-color:#3a3a3a;
-  --website-secondary-color:mediumspringgreen;
+  --website-secondary-color:mediumaquamarine;
   --primary-font-style:"Clarkson",Helvetica,sans-serif;
 
+}
+
+*{
+  font-family: var(--primary-font-style);
 }
 .main-content {
     position: relative; /* Add relative positioning to enable overlay positioning */
@@ -55,9 +59,10 @@
 }
 .main-content-button:hover{
    
-  color:mediumspringgreen;
+  color: var(--website-secondary-color);
   background-color: var(--website-primary-color);
 }
+
 
 .mission-section {
   width: 100%;
@@ -77,7 +82,7 @@
   font-family: var(--primary-font-style);
   text-align: center;
   font-size: 2.6em;
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.7); /* Adjust the shadow properties as needed */
+  
 }
 
 .mission-context-container {
@@ -104,16 +109,6 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 700px) {
-  .mission-title {
-    font-size: 1.5em;
-  }
-
-  .mission-context-container p {
-    font-size: 1em; /* Adjust the font size for smaller screens */
-    padding: 0 1em; /* Add padding to make the text more readable on small screens */
-  }
-}
 
 /* about us section */
 
@@ -125,25 +120,25 @@
 
 }
 
-.aboutus-title-container{
 
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .aboutus-title-container{
   width: 75%;
   padding: 2vw 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+
 
 }
 
 .who-are-we{
   font-family: var(--primary-font-style);
   text-align: center;
-  font-size: 2.6em;
+  font-size: calc(20px + 2.4vw);
+  color: var(--website-primary-color)
 }
 
 .aboutus-content-container{
@@ -193,12 +188,13 @@
   height: 100%;
   display:flex;
   flex-direction: column;
-  
+  justify-content: center;
   align-items: center;
 
 }
 
 .description-container{
+  
   width: 70%;
 }
 
@@ -213,6 +209,7 @@
   color: white;
   display:flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   
 }
@@ -237,7 +234,223 @@
 .Biotech-research-container img{
   width: 60%;
   
+
 }
+
+.content-item-headers{
+  font-size: calc(15px + 1.4vw);
+  
+}
+
+
+
+
+
+/* innovations sections*/
+
+.innovations-containers{
+  width: 100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.5)), url('../../public/Foliar-Stealth-and-R.png');
+  background-size: cover; /* Set the background size to cover */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image */
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color:var(--alternate-font-color)
+}
+
+.innovations-containers h1{
+  font-size: 2vw;
+}
+
+
+
+/* advantages sections*/
+
+.advantages-section{
+
+  color: var(--website-primary-color);
+  
+  background-color: var(--website-secondary-color);
+}
+
+.advantages-header{
+  display:flex;
+  
+  width: 100%;
+  justify-content: center;
+ 
+  
+
+}
+
+.advantages-header h1{
+  font-size: calc(10px + 1.3vw);;
+  border-bottom: var(--website-primary-color) solid 5px;
+  text-align: center;
+
+
+}
+
+.advantages-gallery-container{
+  display:flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+ 
+
+}
+.advantage-image-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+ 
+  padding: 1.5em 0;
+  
+}
+
+.ad-image-container{
+  width: 70%;
+ 
+ 
+}
+
+.ad-image-container img{
+  border-radius: 10px;
+  filter: brightness(80%) contrast(120%);
+  
+  object-fit:cover; 
+  
+  width: 100%;
+
+}
+
+.ad-image-label{
+  width: 60%;
+  border-bottom:#3a3a3a solid 2px;
+}
+.ad-image-label h2{
+  font-size: calc(15px + .6vw);
+  text-align: center;
+}
+
+
+.project-container{
+  width: 100%;
+  
+  display:flex;
+  flex-direction:column;
+}
+
+.project-title-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  
+  
+  background-color: var(--website-primary-color);
+  color: white;
+}
+
+.project-title-container{
+  font-size: calc(20px + 1.7vw);
+}
+
+.project-content-container{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.project1-container{
+  background:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)),url('../../public/project_images/glen-carrie-iB1JuJyQob4-unsplash.jpg');
+  width: 100%;
+  height: 50vh;
+  background-size: cover; /* Set the background size to cover */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image */
+  display: flex;
+  flex-wrap:wrap;
+  padding: 5em 0;
+  justify-content: center;
+
+}
+
+
+.project2-container{
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url('../../public/project_images/potato-farm.jpg');
+  width: 100%;
+  height: 50vh;
+  background-size: cover; /* Set the background size to cover */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image */
+  display: flex;
+  flex-wrap:wrap;
+  padding: 5em 0;
+  justify-content: center;
+  
+
+}
+
+.project3-container{
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url('../../public/project_images/Tuber-vegetables-Potato.jpg');
+  width: 100%;
+  height: 50vh;
+  background-size: cover; /* Set the background size to cover */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image */
+  display: flex;
+  
+  padding: 5em 0;
+  justify-content: center;
+
+}
+
+.project-image-container{
+  width: 45%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  
+  
+
+}
+.project-image-container img{
+  
+  width: 70%;
+  filter: brightness(80%) contrast(120%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.824);
+  border-radius: 10px;
+}
+
+.project-text-container{
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+.project-text-container h1{
+
+  font-size: 3em;
+  text-align: center;
+
+  
+  
+}
+
 
 @media (max-width: 1000px) {
   .aboutus-content-item {
@@ -255,8 +468,72 @@
     
     font-size: 2vw;
   }
+  .advantage-image-section{
+    
+    width: 50%;
+  }
+  .project1-container{
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  .project2-container{
+    display: flex;
+    
+    justify-content: center;
+    align-self: center;
+    
+  }
+  .project3-container{
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .project-image-container{
+    width: 100%;
+  
+  }
+
+  .project-text-container{
+    width: 100%;
+   
+    
+    
+  }
+  .project-text-container h1{
+
+    font-size: 1.5em;
+   
+
+  }
+  
+  
   
 
-  
 
+  
+  
+  
 }
+
+/*projects section*/
+
+
+
+@media (max-width: 700px) {
+  .mission-title {
+    font-size: 1.5em;
+  }
+
+  .mission-context-container p {
+    font-size: .7em; /* Adjust the font size for smaller screens */
+    padding: 0 1em; /* Add padding to make the text more readable on small screens */
+  }
+  .advantage-image-section{
+    
+    width: 100%;
+  }
+  
+}
+
+

@@ -86,6 +86,11 @@
 
 }
 
+.social-icon{
+    width: 60%;
+    height: 60%;
+}
+
 
 
 @media (max-width: 600px){
@@ -99,7 +104,10 @@
     .logo-containers{
         width: 50%;
     }
-    
+    .social-icon{
+        width: 20%;
+        height: 20%;
+    }
 
     
 
