@@ -15,7 +15,7 @@
 }
 .main-content {
     position: relative; /* Add relative positioning to enable overlay positioning */
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.5)), url('../../public/CEZY4236.JPG');
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.5)), url('../../public/Aerial-app-at-Sunris.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -242,10 +242,6 @@
   
 }
 
-
-
-
-
 /* innovations sections*/
 
 .innovations-containers{
@@ -452,6 +448,84 @@
 }
 
 
+
+/* products section*/
+.products-contain{
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction:column;
+  
+}
+
+.products-header-container{
+
+  width: 100%;
+  text-align: center;
+  font-family: var(--primary-font-style);
+  text-align: center;
+  font-size: calc(20px + 1vw);
+  color: var(--website-primary-color);
+
+}
+
+.labels-section{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--website-primary-color);}
+
+.labels-scroll-bar{
+  width: 100%; /* Set the width of the scrollable panel */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  background-color: whitesmoke;
+  white-space: nowrap; /* Prevent line breaks between child elements */
+
+
+  
+}
+
+
+.labels-containers{
+  display:inline-block;
+  background-color: var(--website-secondary-color);
+  padding: .5vw 2vw;
+  
+  
+
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  
+  margin: 2vw;
+  
+}
+
+.labels-content{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: calc(10px + 1.5vw);
+  width: 100%;
+
+}
+
+.labels-title-container{
+  font-family: var(--primary-font-style);
+  text-align: center;
+  font-size: calc(10px + 1.5vw);
+  color: var(--website-secondary-color);
+}
+
+.labels-containers:hover{
+  background-color: var(--website-primary-color);
+  color:#3a3a3a;
+
+
+}
+
+
+
+
 @media (max-width: 1000px) {
   .aboutus-content-item {
     width: 100%
@@ -508,15 +582,9 @@
   }
   
   
-  
-
-
-  
-  
-  
 }
 
-/*projects section*/
+
 
 
 
@@ -533,7 +601,11 @@
     
     width: 100%;
   }
+  /* .labels-containers{
+   
+    padding:  0;
+
+    
+  } */
   
 }
-
-

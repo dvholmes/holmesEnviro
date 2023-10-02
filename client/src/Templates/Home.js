@@ -1,12 +1,24 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import ProductsPanel from '../components/products'
 
 
 
 import '../css_file/homepage.css'
 
 function HomePage(){
+
+
+    const scrollElement = useRef(null);
+
+    // Use the scrollIntoView method to scroll to the element
+    const scrollToElement = () => {
+        // Use the scrollIntoView method to scroll to the element
+        if (scrollElement.current) {
+          scrollElement.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
     return (
 
@@ -25,7 +37,7 @@ function HomePage(){
                     <h1 className = "main-content-header">INOCULATE SOIL AND CROP HEALTH</h1>
 
                     <div className = "main-button-container">
-                        <button className = "main-content-button">Contact Us</button>
+                        <button onClick={scrollToElement} className = "main-content-button">Contact Us</button>
                     </div>
                 </div>
     
@@ -283,11 +295,74 @@ function HomePage(){
 
             </section>
 
-            
-           
+            <section className = 'products-contain'>
 
+                <div className = 'products-header-container'>
+                    <h1>Products</h1>
+
+
+                </div>
+                <ProductsPanel/>
+                
+            </section>
+
+            <section className = 'labels-section'>
+                <div className = 'labels-title-container'>
+                    <h1>Download Bioproducts labels and SDS</h1>
+
+
+                </div>
+
+                <div className = 'labels-scroll-bar'>
+
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/hyper-galaxy08.pdf" className = "labels-content" download>HyperGalaxy Label</a>
+
+                    </div>
+
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/Hyper Galaxy SDS v2019.pdf" className = "labels-content" download>HyperGalaxy SDS</a>
+
+                    </div>
+
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/redtail05.pdf" className = "labels-content" download>RedTail Label</a>
+
+                    </div>
+
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/RedTail SDS v2019.pdf" className = "labels-content" download>RedTail SDS</a>
+
+                    </div>
+
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/stealth25.pdf" className = "labels-content" download>Stealth Label</a>
+
+                    </div>
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/Stealth  SDS v2019.pdf" className = "labels-content" download>Stealth SDS</a>
+
+                    </div>
+                    <div className = 'labels-containers'>
+
+                        <a href = "Labels/Enhand22.pdf" className = "labels-content" download>Enhand Label</a>
+
+                    </div>
+                    <div className = 'labels-containers'>
+                        <a href = "Labels/Enhand SDS v2019.pdf" className = "labels-content" download>Enhand SDS</a> 
+
+                    </div>
+
+
+
+               
+                </div>
+
+            </section>
+
+            
           
-            <div className = 'footer-container'>
+            <div  ref = {scrollElement} className = 'footer-container'>
                 <Footer/>
 
             </div>

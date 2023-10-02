@@ -29,6 +29,10 @@
     align-items: center;
     padding:2em;
 }
+
+.copyright-container h1{
+    text-align: center;
+}
 .contacts-container{
     
     display:flex;
@@ -67,6 +71,7 @@
 
 .copy-right-text{
     font-size: 1em;
+    text-align: center;
 }
 
 .footer-image-container{

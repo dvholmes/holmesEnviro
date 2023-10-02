@@ -40,7 +40,6 @@
 
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(7, 10, 10); */
     
 
 }
@@ -49,8 +48,6 @@
    
     display:flex;
     align-items: center;
-
-    /* background-color: rgb(152, 211, 211); */
     margin-right: auto;
     
 }
@@ -71,7 +68,7 @@
    
     height: 100%;
    float: right;
-   /* background-color: rgb(104, 104, 103); */
+   
    
 
 }
@@ -86,11 +83,12 @@
 }
 
 .navbar-item {
-    /* Adjust the margin as needed */
+
     margin: auto;
     
     
-  }
+}
+
 
 
 
@@ -99,10 +97,7 @@
     display:flex;
 
     justify-content: center;
-    align-items: center;
-    
-  
-    
+    align-items: center;  
     
 }
 
@@ -124,6 +119,12 @@
     color:var(--main-font-color);
     padding: .6rem;
     height: 100%;
+}
+
+.nav-link-text.active {
+    font-weight: bold; /* Make the active link text bold */
+    color: var(--website-secondary-color)
+    /* Add any other styles you want for the active link */
 }
 
 .nav-link-text:hover{
@@ -225,7 +226,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:2vw;
+    padding:2cvw;
   
 }
 
@@ -246,6 +247,11 @@
 
 }
 
+.sidebar-text.active {
+    font-weight: bold; /* Make the active link text bold */
+    color: black;
+    /* Add any other styles you want for the active link */
+}
 
 .sidebar-icon{
     width:10vw;
@@ -255,6 +261,11 @@
 }
 
 /* remove navbar when the width is below 1070*/
+
+.selected {
+    color: red; /* Change this to your desired color */
+    /* Add any other styles you want for the selected link */
+  }
 
 @media (max-width: 1210px) {
     /* CSS styles to apply when the screen width is 768px or smaller */
